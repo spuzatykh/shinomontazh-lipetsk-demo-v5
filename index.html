@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--
+  ДЕМО-ВЕРСИЯ v5 «Для показа». Не публиковать без команды пользователя.
+  Сайт: шиномонтаж, Липецк (карточка 2ГИС ID 70000001113441554)
+
+  Что намеренно НЕ выведено на страницу (до подтверждения владельцем и оплаты):
+    - цены и таблица цен (будут после покупки сайта);
+    - режим 24/7 (не подтверждён карточкой 2ГИС);
+    - адрес улицы (в карточке только координаты);
+    - выездная бригада, фото кроме обложки из карточки;
+    - онлайн-оплата (эквайринг не подключён).
+
+  Данные из 2ГИС: телефон +7 950 804-68-68, координаты 39.695121, 52.655863.
+  WhatsApp: предполагается тот же номер, проверить перед передачей клиенту.
+-->
+<html lang="ru">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(168%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(198%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3ES%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#142a7b">
+<link rel="canonical" href="https://spuzatykh.github.io/shinomontazh-lipetsk-demo-v5/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Шиномонтаж в Липецке — срочный вызов | Демо">
+<meta property="og:title" content="Шиномонтаж в Липецке — срочный вызов | Демо">
+<meta property="og:description" content="Шиномонтаж в Липецке. Срочный вызов при проколе, ремонт проколов, сезонная замена и балансировка. Звоните или пишите в WhatsApp.">
+<meta property="og:url" content="https://spuzatykh.github.io/shinomontazh-lipetsk-demo-v5/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://spuzatykh.github.io/shinomontazh-lipetsk-demo-v5/cover.jpg">
+<meta property="og:image:alt" content="Шиномонтаж в Липецке — срочный вызов | Демо">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Шиномонтаж в Липецке — срочный вызов | Демо">
+<meta name="twitter:description" content="Шиномонтаж в Липецке. Срочный вызов при проколе, ремонт проколов, сезонная замена и балансировка. Звоните или пишите в WhatsApp.">
+<meta name="twitter:image" content="https://spuzatykh.github.io/shinomontazh-lipetsk-demo-v5/cover.jpg">
+<meta name="twitter:image:alt" content="Шиномонтаж в Липецке — срочный вызов | Демо">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шиномонтаж в Липецке — срочный вызов | Демо</title>
+  <meta name="description" content="Шиномонтаж в Липецке. Срочный вызов при проколе, ремонт проколов, сезонная замена и балансировка. Звоните или пишите в WhatsApp.">
+  <style>
+    /* Палитра: асфальт + жёлтый протектор + оранжевый сигнал. Контраст WCAG AA */
+    :root {
+      --asphalt: #0c0d10;
+      --asphalt-2: #171a20;
+      --paper: #f5f3ee;
+      --ink: #14151a;
+      --yellow: #ffd400;
+      --orange: #ff5a00;
+      --red: #e0201b;
+      --green: #1fbf6a;
+      --radius: 16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    body {
+      margin: 0;
+      font-family: "Arial Black", "Segoe UI", Arial, sans-serif;
+      font-weight: 900;
+      font-size: 1.0625rem;
+      line-height: 1.45;
+      color: var(--ink);
+      background: var(--paper);
+      padding-bottom: 96px; /* место под закреплённую панель на мобильных */
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    section { padding: 48px 20px; position: relative; }
+    h1, h2, h3 { line-height: 1.08; margin: 0 0 14px; text-transform: uppercase; letter-spacing: -.01em; }
+    h1 { font-size: clamp(2.1rem, 7vw, 3.8rem); }
+    h2 { font-size: clamp(1.7rem, 5vw, 2.6rem); }
+    p { margin: 0 0 12px; font-family: "Segoe UI", Arial, sans-serif; font-weight: 500; }
+    .wrap { max-width: 1120px; margin: 0 auto; }
+
+    /* Полоса «опасной» разметки — разделитель блоков */
+    .hazard {
+      height: 14px;
+      background: repeating-linear-gradient(-45deg, var(--yellow) 0 18px, var(--ink) 18px 36px);
+    }
+
+    /* Кнопки: единственный тип интерактива на странице */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 58px; padding: 14px 26px;
+      border: 0; border-radius: 999px; font: inherit; font-weight: 900;
+      text-transform: uppercase; letter-spacing: .02em; text-decoration: none; text-align: center;
+      cursor: pointer; transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    /* Двойной контур: тёмный на светлом фоне, белый на тёмном (WCAG 2.4.11) */
+    .btn:focus-visible { outline: 4px solid var(--ink); outline-offset: 3px; box-shadow: 0 0 0 8px #fff; }
+    .btn-urgent {
+      background: var(--red); color: #fff; min-height: 66px; font-size: 1.2rem;
+      box-shadow: 0 0 0 0 rgba(224,32,27,.7); animation: pulse 2.2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(224,32,27,.7); }
+      70% { box-shadow: 0 0 0 18px rgba(224,32,27,0); }
+      100% { box-shadow: 0 0 0 0 rgba(224,32,27,0); }
+    }
+    .btn-book { background: var(--yellow); color: var(--ink); }
+    .btn-ghost { background: transparent; color: var(--yellow); border: 3px solid var(--yellow); }
+    .btn-wa { background: #25d366; color: var(--ink); }
+    .btn-route { background: #fff; color: var(--ink); border: 3px solid var(--ink); }
+    .btn-call { background: var(--orange); color: var(--ink); }
+
+    /* ───── 1. Первый экран (#start) ───── */
+    #start {
+      background:
+        radial-gradient(circle at 78% 42%, rgba(255,212,0,.22), transparent 42%),
+        linear-gradient(165deg, var(--asphalt) 0%, var(--asphalt-2) 100%);
+      color: #fff;
+      padding-top: 36px;
+      overflow: hidden;
+    }
+    /* Фактура асфальта */
+    #start::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .35;
+      background-image: radial-gradient(#2b2f38 1px, transparent 1.4px);
+      background-size: 9px 9px;
+    }
+    .hero { position: relative; display: grid; gap: 24px; align-items: center; }
+    .hero > * { min-width: 0; }
+    .badge {
+      display: inline-block; background: var(--yellow); color: var(--ink);
+      padding: 6px 14px; border-radius: 6px; font-size: .9rem; margin-bottom: 14px;
+      transform: rotate(-2deg);
+    }
+    .hero h1 .hl { color: var(--yellow); }
+    .hero .sub { font-size: 1.2rem; color: #d9dde6; margin-bottom: 22px; }
+    .tread-list {
+      display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 22px;
+    }
+    .tread-list li {
+      background: #fff; color: var(--ink); border-radius: 4px; padding: 6px 12px;
+      font-size: .9rem; clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+      padding-right: 22px;
+    }
+    .hero-actions { display: grid; gap: 12px; }
+
+    /* Колесо-иллюстрация */
+    .stage { position: relative; display: grid; place-items: center; min-height: 340px; }
+    .wheel-svg {
+      width: min(86vw, 420px); height: auto;
+      filter: drop-shadow(0 22px 34px rgba(0,0,0,.6));
+    }
+    .wheel-spin { transform-origin: 200px 200px; animation: spin 18s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .keys-svg {
+      position: absolute; width: 120px; right: 0; bottom: -6px;
+      transform: rotate(-18deg); filter: drop-shadow(0 10px 16px rgba(0,0,0,.5));
+    }
+
+    /* ───── 2. Выбор услуги (#choose) ───── */
+    #choose { background: var(--ink); color: #fff; }
+    #choose p { color: #cfd3dc; }
+    .cards { display: grid; gap: 16px; margin-top: 20px; }
+    .card-btn {
+      display: flex; flex-direction: column; gap: 6px; min-height: 104px; padding: 20px;
+      border-radius: var(--radius); background: var(--asphalt-2); color: #fff; text-decoration: none;
+      font-size: 1.2rem; border: 3px solid #2d313b; transition: transform .15s ease, border-color .15s ease;
+    }
+    .card-btn small { font-family: "Segoe UI", Arial, sans-serif; font-weight: 500; font-size: .95rem; color: #b9bfcc; }
+    .card-btn:hover { transform: translateY(-3px); border-color: var(--yellow); }
+    .card-btn:focus-visible { outline: 4px solid var(--yellow); outline-offset: 3px; }
+    .card-btn--hot { background: var(--red); border-color: var(--red); }
+    .card-btn--hot small { color: #fff; }
+
+    /* ───── 3. Связаться (#contact) ───── */
+    #contact { background: var(--yellow); }
+    .contact-grid { display: grid; gap: 24px; align-items: start; }
+    .action-box {
+      background: #fff; border: 4px solid var(--ink); border-radius: var(--radius);
+      padding: 22px; box-shadow: 8px 8px 0 var(--ink);
+    }
+    .action-box p { color: #2a2c34; }
+    .action-buttons { display: grid; gap: 12px; margin-top: 8px; }
+    .info-box {
+      background: var(--ink); color: #fff; border-radius: var(--radius); padding: 22px;
+    }
+    .info-box dt { font-family: "Segoe UI", Arial, sans-serif; font-weight: 700; color: var(--yellow); font-size: .9rem; }
+    .info-box dd { margin: 4px 0 0; font-size: 1.15rem; }
+    .contact-photo { border-radius: var(--radius); border: 4px solid var(--ink); max-width: 360px; }
+
+    /* ───── 4. Закреплённая панель (мобильные) ───── */
+    .sticky-bar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: 10px 12px;
+      background: var(--ink); box-shadow: 0 -6px 20px rgba(0,0,0,.35);
+    }
+    .sticky-bar .btn-urgent { width: 100%; min-height: 58px; font-size: 1.1rem; animation: none; }
+
+    .info-foot { padding: 32px 20px; background: var(--asphalt); }
+
+    /* ───── Водяной знак «ДЕМО» ───── */
+    .demo-watermark {
+      position: fixed; inset: 0; pointer-events: none; z-index: 100; overflow: hidden;
+      display: grid; place-items: center;
+    }
+    .demo-watermark span {
+      font-size: clamp(4rem, 18vw, 12rem); font-weight: 900; color: rgba(224,32,27,.13);
+      transform: rotate(-28deg); white-space: nowrap; letter-spacing: .05em;
+    }
+
+    /* ───── Адаптив ───── */
+    @media (min-width: 720px) {
+      section { padding: 72px 32px; }
+      .hero { grid-template-columns: 1.05fr .95fr; }
+      .hero-actions { grid-template-columns: 1fr 1fr; }
+      .hero-actions .btn-urgent { grid-column: 1 / -1; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+      .action-buttons { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1000px) {
+      .cards { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 720px) {
+      .sticky-bar { display: none; }
+      body { padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ВОДЯНОЙ ЗНАК: ДЕМО. Убирается только по команде на публикацию -->
+  <div class="demo-watermark" aria-hidden="true"><span>ДЕМО</span></div>
+
+<main>
+  <!-- 1. Первый экран (#start) -->
+  <section id="start">
+    <div class="wrap hero">
+      <div>
+        <span class="badge">Шиномонтаж в Липецке</span>
+        <h1>Колесо <span class="hl">спустило?</span><br>Поможем быстро.</h1>
+        <p class="sub">Ремонт проколов · сезонная замена · балансировка</p>
+        <ul class="tread-list" aria-label="Услуги">
+          <li>Ремонт прокола</li>
+          <li>Сезонная замена</li>
+          <li>Балансировка</li>
+        </ul>
+        <div class="hero-actions">
+          <!-- Телефон из карточки 2ГИС: +7 950 804-68-68 -->
+          <a class="btn btn-urgent" href="tel:+79508046868"><span aria-hidden="true">🚨</span> Срочный вызов</a>
+          <a class="btn btn-ghost" href="#choose">Что случилось? ↓</a>
+        </div>
+      </div>
+
+      <!-- Иллюстрация: колесо с протектором, надпись по ободу и ключи -->
+      <div class="stage" role="img" aria-label="Колесо с протектором, на ободе надпись «Срочно», рядом ключи">
+        <svg class="wheel-svg" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+          <defs>
+            <!-- Траектория текста по ободу (верх) -->
+            <path id="rimTop" d="M 200,200 m -98,0 a 98,98 0 1,1 196,0"/>
+            <!-- Траектория текста по протектору (круг) -->
+            <path id="treadCircle" d="M 200,200 m -170,0 a 170,170 0 1,1 340,0 a 170,170 0 1,1 -340,0"/>
+          </defs>
+
+          <!-- Протектор: чёрная резина с рисунком блоков -->
+          <circle cx="200" cy="200" r="190" fill="#0b0b0d"/>
+          <circle cx="200" cy="200" r="170" fill="none" stroke="#1e2026" stroke-width="34" stroke-dasharray="22 10"/>
+          <circle cx="200" cy="200" r="170" fill="none" stroke="#2b2f38" stroke-width="2" stroke-dasharray="4 6"/>
+          <!-- Надпись на протекторе -->
+          <text fill="#ffd400" font-family="Arial Black, Arial, sans-serif" font-size="22" font-weight="900">
+            <textPath href="#treadCircle" startOffset="0" textLength="1040" lengthAdjust="spacing">ШИНОМОНТАЖ • ЛИПЕЦК • СРОЧНО •</textPath>
+          </text>
+
+          <!-- Диск: вращается -->
+          <g class="wheel-spin">
+            <circle cx="200" cy="200" r="118" fill="#e9edf3"/>
+            <circle cx="200" cy="200" r="118" fill="none" stroke="#ff5a00" stroke-width="8"/>
+            <!-- Спицы -->
+            <g fill="#c4ccd8">
+              <path d="M200,200 L186,88 Q200,82 214,88 Z"/>
+              <path d="M200,200 L186,88 Q200,82 214,88 Z" transform="rotate(72 200 200)"/>
+              <path d="M200,200 L186,88 Q200,82 214,88 Z" transform="rotate(144 200 200)"/>
+              <path d="M200,200 L186,88 Q200,82 214,88 Z" transform="rotate(216 200 200)"/>
+              <path d="M200,200 L186,88 Q200,82 214,88 Z" transform="rotate(288 200 200)"/>
+            </g>
+            <!-- Отверстия под болты -->
+            <g fill="#0b0b0d">
+              <circle cx="200" cy="170" r="6"/><circle cx="224" cy="184" r="6"/>
+              <circle cx="215" cy="212" r="6"/><circle cx="185" cy="212" r="6"/>
+              <circle cx="176" cy="184" r="6"/>
+            </g>
+            <circle cx="200" cy="200" r="34" fill="#ffd400"/>
+            <circle cx="200" cy="200" r="12" fill="#0b0b0d"/>
+            <!-- Надпись по ободу -->
+            <text fill="#0b0b0d" font-family="Arial Black, Arial, sans-serif" font-size="15" font-weight="900" letter-spacing="2">
+              <textPath href="#rimTop" startOffset="50%" text-anchor="middle">СРОЧНО</textPath>
+            </text>
+          </g>
+        </svg>
+
+        <!-- Ключи -->
+        <svg class="keys-svg" viewBox="0 0 120 160" aria-hidden="true" focusable="false">
+          <rect x="30" y="4" width="60" height="72" rx="16" fill="#ff5a00"/>
+          <circle cx="60" cy="40" r="14" fill="#0c0d10"/>
+          <circle cx="60" cy="40" r="5" fill="#ffd400"/>
+          <rect x="50" y="76" width="20" height="70" fill="#c4ccd8"/>
+          <rect x="70" y="118" width="18" height="10" fill="#c4ccd8"/>
+          <rect x="70" y="136" width="14" height="10" fill="#c4ccd8"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="hazard" aria-hidden="true"></div>
+
+  <!-- 2. Выбор услуги (#choose) -->
+  <section id="choose">
+    <div class="wrap">
+      <h2>Что случилось?</h2>
+      <p>Нажмите то, что подходит. Дальше подскажем, как связаться.</p>
+      <div class="cards">
+        <a class="card-btn card-btn--hot" href="#contact" data-service="Прокол, срочный выезд">
+          <span aria-hidden="true">🛞</span> Прокол <small>Срочно починим или заменим колесо</small>
+        </a>
+        <a class="card-btn" href="#contact" data-service="Сезонная замена шин">
+          <span aria-hidden="true">❄️</span> Сезонная замена <small>Зима или лето, комплект на 4 колеса</small>
+        </a>
+        <a class="card-btn" href="#contact" data-service="Балансировка колёс">
+          <span aria-hidden="true">⚖️</span> Балансировка <small>Вибрация на скорости, руль «ведёт»</small>
+        </a>
+        <a class="card-btn" href="#contact" data-service="Консультация по шинам">
+          <span aria-hidden="true">❔</span> Не знаю <small>Подскажем по телефону или в WhatsApp</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hazard" aria-hidden="true"></div>
+
+  <!-- 3. Связаться (#contact) -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Запишитесь за минуту</h2>
+        <p>Выберите удобный способ. Ответим и подскажем, как быстрее помочь.</p>
+        <div class="action-box">
+          <div class="action-buttons">
+            <!-- WhatsApp: номер предполагаемый, ПРОВЕРИТЬ. Текст подставляется скриптом при выборе услуги -->
+            <a class="btn btn-book" id="book-btn" href="https://wa.me/79508046868?text=Здравствуйте!%20Хочу%20записаться%20на%20шиномонтаж" target="_blank" rel="noopener">Записаться</a>
+            <!-- Телефон из карточки 2ГИС -->
+            <a class="btn btn-call" href="tel:+79508046868"><span aria-hidden="true">📞</span> Позвонить</a>
+            <a class="btn btn-wa" href="https://wa.me/79508046868?text=Здравствуйте!" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> WhatsApp</a>
+            <!-- Маршрут по координатам из карточки 2ГИС (39.695121, 52.655863) -->
+            <a class="btn btn-route" href="https://2gis.ru/lipetsk/directions/points/%7C39.695121%2C52.655863%3B70000001113441554" target="_blank" rel="noopener"><span aria-hidden="true">🗺️</span> Маршрут</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- Фото: обложка из карточки 2ГИС -->
+        <img class="contact-photo" src="img/cover.jpg" alt="Шиномонтажная мастерская в Липецке" loading="lazy" width="1440" height="1690">
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="info-foot">
+    <div class="wrap info-box">
+      <dl>
+        <dt>Телефон</dt>
+        <dd>+7 950 804-68-68</dd>
+      </dl>
+    </div>
+  </footer>
+
+  <!-- 4. Закреплённая нижняя панель: только мобильные -->
+  <div class="sticky-bar">
+    <a class="btn btn-urgent" href="tel:+79508046868"><span aria-hidden="true">🚨</span> Срочный вызов</a>
+  </div>
+
+  <script>
+    // Выбранная услуга подставляется в текст WhatsApp-сообщения записи
+    (function () {
+      var book = document.getElementById('book-btn');
+      if (!book) return;
+      var base = 'https://wa.me/79508046868?text=';
+      document.querySelectorAll('[data-service]').forEach(function (card) {
+        card.addEventListener('click', function () {
+          book.href = base + encodeURIComponent('Здравствуйте! Хочу записаться. Услуга: ' + card.dataset.service);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
